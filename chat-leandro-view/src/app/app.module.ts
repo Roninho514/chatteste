@@ -14,6 +14,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserDialogComponent } from './components/dialogs/user-dialog/user-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './store/home.app.state';
+import { EffectsModule } from '@ngrx/effects';
 
 
 
@@ -35,7 +38,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    StoreModule.forRoot({app : appReducer}),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

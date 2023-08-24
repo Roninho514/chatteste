@@ -1,12 +1,14 @@
-<h1>Welcome to Chat Leandro!</h1>
-<div mat-dialog-content>
-  <p>Please write your name:</p>
-  <mat-form-field>
-    <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="username">
-  </mat-form-field>
-
-</div>
-<div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="username" cdkFocusInitial color="primary">Login</button>
+<div class="container-dialog">
+  <h1>Welcome to Chat Leandro!</h1>
+  <div mat-dialog-content>
+    <p>Please write your name:</p>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="username">
+    </mat-form-field>
+  
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="username" cdkFocusInitial color="primary">Login</button>
+  </div>
 </div>

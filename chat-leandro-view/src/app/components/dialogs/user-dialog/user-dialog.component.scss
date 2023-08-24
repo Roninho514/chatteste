@@ -1,0 +1,15 @@
+.container-dialog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 30px;
+        margin: 12px;
+    }
+
+    button{
+        margin: 10px;
+    }
+}

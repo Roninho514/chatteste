@@ -1,6 +1,39 @@
+.container-main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.container-users{
+  width: 20%;
+  height: auto;
+  background-color: #f3f3f3;
+  border-right: 1px solid rgba(0, 0, 0, 0.062);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .top-user{
+    width: 100%;
+    height: 5%;
+  }
+  .card-user-room{
+    width: 90%;
+    height: 5%;
+    margin: 3%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    span{
+      padding-left: 2%;
+      font-weight: 500;
+    }
+  }
+}
+
 .container-chat{
-  min-width: 150px;
-  max-width: 1000px;
+  width: 60%;
   height: calc(100% - 50px);
   margin: auto;
   background-color: white;
@@ -39,21 +72,21 @@
 }
 
 .message-line.me{
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .message-line.other {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .message.me{
   background-color: rgba(61, 61, 240, 0.692);
-  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .message.other{
   background-color: rgba(185, 180, 180, 0.459);
-  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .username{
@@ -62,6 +95,8 @@
 
 .footer{
   border-top: 1px solid rgba(0, 0, 0, 0.062);
+  display: flex;
+  align-items: center;
 }
 
 .form{
@@ -69,11 +104,10 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  min-width: 150px;
-  max-width: 1000px;
   width: 100%;
 }
 
 .input{
   width: 90%;
+  margin-top: 2%;
 }
