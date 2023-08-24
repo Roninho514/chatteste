@@ -1,0 +1,32 @@
+<div class="container-chat">
+  <mat-toolbar class="header" color="primary">
+    <span>Chat leandro</span>
+      <button mat-button (click)="logOut()">Log out <mat-icon>logout</mat-icon>  </button>
+  </mat-toolbar>
+  <div class="messages">
+    <ng-template ngFor let-message [ngForOf]="messages" let-i="index">
+      <div *ngIf="message.userName == userName" class="message-line me">
+        <div class="message me">
+          <div class="username me">{{message.userName}}</div>
+          <div>{{message.text}}</div>
+        </div>
+      </div>
+      <div *ngIf="message.userName != userName" class="message-line other">
+        <div class="message other">
+          <div class="username other">{{message.userName}}</div>
+          <div>{{message.text}}</div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div class="footer">
+    <form class="form">
+      <mat-form-field class="input">
+        <input matInput placeholder="Type your message" [formControl]="messageControl">
+      </mat-form-field>
+      <button (click)="sendMessage()" color="primary" mat-mini-fab aria-label="Send">
+        <mat-icon>send</mat-icon>
+      </button>
+    </form>
+  </div>
+</div>
